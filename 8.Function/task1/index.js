@@ -11,3 +11,22 @@ getName2, getName3.
 равно name”, где name - значение переданного в функцию параметра name.
 После вам необходимо вызвать каждую функцию и вывести возвращаемое из нее
 значение в консоль */
+
+// declaration
+let name;
+function getName1(name) { 
+    return (`Имя равно ${name}`);
+}
+console.log(getName1('Khamza'));
+
+// expression
+let getName2 = function(name) {
+    return (`Имя равно ${name}`);
+}
+console.log(getName2('Khamza'));
+
+// arrow
+let getName3 = (name) => {
+    return (`Имя равно ${name}`);
+}
+console.log(getName3('Khamza'));
