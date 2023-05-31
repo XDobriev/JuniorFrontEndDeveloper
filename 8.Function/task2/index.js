@@ -14,3 +14,22 @@ getSumOfNumbers принимает в себя 2 параметра: number и t
 2. number = 10, type = ‘even’. Возвращает 30.
 3. number = 10, type = ‘’. Возвращает 55. */
 
+
+const getSumOfNumbers = (number, type = 'odd') => {
+    let sum = 0;
+    for (let i = 0; i <= number; i++) {
+        const isEven = i % 2 === 0;
+        const isOdd = !isEven;
+        if (!type) {
+            sum +=i;
+        } else if (isEven && type === 'even') {
+            sum +=i;
+        } else if (isOdd && type === 'odd') {
+            sum +=i;
+        }
+    }
+    return sum;
+    console.log(sum);
+}
+const result = getSumOfNumbers(10, '');
+console.log('result', result);
